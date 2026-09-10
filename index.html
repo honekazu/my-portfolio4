@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【初回50%OFF】時短と美を両立する新習慣スキンケア｜Skin care core</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#F0F9F3', // 朝露のような透明感のある白緑
+                            DEFAULT: '#6AB575', // 新緑のフレッシュグリーン
+                            dark: '#4A9455', // 木漏れ日のような深い緑
+                        },
+                        accent: {
+                            DEFAULT: '#F4B942', // 太陽の光を感じる温かいイエローオレンジ
+                        },
+                        text: {
+                            main: '#334036', // 葉の影のような深いグリーンチャコール
+                            light: '#6B7A6F'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* カスタムスタイル・アニメーション */
+        body { color: #334036; background-color: #FAFCFB; }
+        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        
+        /* 画像プレースホルダー用のスタイル */
+        .img-placeholder {
+            background: linear-gradient(135deg, #EBF5ED 0%, #DCE8DF 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8A9E8F;
+            font-size: 0.875rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* フローティングCTA */
+        #floating-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 50;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+        }
+        #floating-cta.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- Header (Logo) -->
+    <header class="w-full bg-white/80 backdrop-blur-sm fixed top-0 z-40 shadow-sm">
+        <div class="max-w-screen-md mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="font-serif text-xl font-bold tracking-widest text-brand-dark">Skin care core</h1>
+        </div>
+    </header>
+
+    <!-- ① ファーストビュー -->
+    <section class="relative pt-20 pb-12 lg:pt-28 lg:pb-20 bg-brand-light overflow-hidden">
+        <!-- 背景装飾 -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-white opacity-60 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand/10 blur-3xl"></div>
+
+        <div class="max-w-screen-md mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <!-- コピー部分 -->
+                <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left fade-up">
+                    <p class="text-brand-dark font-bold text-sm tracking-wider mb-3">忙しい30〜40代のための新習慣</p>
+                    <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl leading-tight font-bold mb-6 text-text-main">
+                        朝の30秒で、夕方まで<br>
+                        <span class="text-brand">“お疲れ顔”</span>を見せない。
+                    </h2>
+                    <p class="text-text-light mb-8 text-sm md:text-base leading-relaxed">
+                        忙しいあなたの肌を、塗った瞬間から解き放つ。<br>
+                        もう、丁寧なスキンケアを諦めなくていい。<br>
+                        これ1本で、エステ帰りのようなハリ艶をその手に。
+                    </p>
+
+                    <!-- CTA -->
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full mb-2 animate-bounce shadow-sm">
+                            ＼ 初回限定 50%OFF ／
+                        </div>
+                        <a href="#offer" class="w-full max-w-sm block bg-gradient-to-r from-brand to-brand-dark hover:from-brand-dark hover:to-brand text-white font-bold py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-center text-lg relative overflow-hidden group">
+                            <span class="absolute inset-0 w-full h-full bg-white/20 transform -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out"></span>
+                            初回50%OFFで賢く始める
+                        </a>
+                        <p class="text-xs text-text-light mt-3 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            定期縛りなし
+                            <svg class="w-4 h-4 text-green-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            全国送料無料
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 商品画像部分 -->
+                <div class="w-full md:w-1/2 order-1 md:order-2 relative fade-up">
+                    <div class="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl bg-white">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Skin care core" class="w-full h-full object-cover">
+                    </div>
+                    <!-- バッジ -->
+                    <div class="absolute -top-4 -right-4 bg-accent text-white rounded-full w-24 h-24 flex flex-col items-center justify-center font-bold shadow-lg transform rotate-12">
+                        <span class="text-xs">初回限定</span>
+                        <span class="text-2xl leading-none">50%</span>
+                        <span class="text-sm">OFF</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ② 共感・課題提起 -->
+    <section class="py-16 bg-white">
+        <div class="max-w-screen-md mx-auto px-4 fade-up">
+            <h2 class="text-center font-serif text-2xl font-bold mb-10 text-text-main relative pb-4">
+                毎日忙しいあなたへ。<br class="md:hidden">こんなお悩みありませんか？
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-brand rounded-full"></span>
+            </h2>
+
+            <div class="bg-brand-light/50 rounded-2xl p-6 md:p-10 mx-auto max-w-lg shadow-sm border border-brand-light">
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-brand shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="ml-3 text-text-main font-medium">化粧水、乳液、美容液…<span class="text-brand font-bold border-b border-brand">ステップが多すぎて続かない</span></span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-brand shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="ml-3 text-text-main font-medium">夕方ふと鏡を見ると、<span class="text-brand font-bold border-b border-brand">想像以上に疲れが肌に出ている</span></span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-brand shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="ml-3 text-text-main font-medium">手抜きはしたくないけれど、<span class="text-brand font-bold border-b border-brand">自分に割ける時間がない</span></span>
+                    </li>
+                </ul>
+            </div>
+            
+            <p class="text-center mt-8 text-lg font-bold text-text-main">
+                そのお悩み、<span class="text-brand text-xl">Skin care core</span> が<br class="md:hidden">解決します！
+            </p>
+        </div>
+    </section>
+
+    <!-- ③ 解決策の提示 -->
+    <section class="py-16 bg-gradient-to-b from-brand-light to-white">
+        <div class="max-w-screen-md mx-auto px-4 fade-up">
+            <div class="text-center mb-12">
+                <span class="text-brand font-bold tracking-widest text-sm">SOLUTION</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold mt-2 text-text-main">
+                    圧倒的な時短と、<br class="md:hidden">妥協のない美しさを両立。
+                </h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 items-center bg-white p-6 rounded-3xl shadow-lg border border-gray-50">
+                <div class="w-full md:w-1/2 aspect-[4/3] rounded-xl overflow-hidden bg-brand-light">
+                    <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="洗顔後はこれ1本で完結" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-bold mb-4 text-text-main">洗顔後は、これ1本で完結。</h3>
+                    <p class="text-text-light leading-relaxed mb-4">
+                        化粧水からクリームまでの役割を1本に凝縮。こだわりの独自処方で、ただの時短ケアではなく、エステで丁寧にケアしたあとのような「ハリ」と「艶」を叶えます。
+                    </p>
+                    <p class="text-text-light leading-relaxed">
+                        忙しい朝も、クタクタの夜も、サッと塗るだけ。自分を労わる「ちょっとした贅沢な時間」に変わります。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ④ ベネフィット（強み） -->
+    <section class="py-16 bg-white">
+        <div class="max-w-screen-md mx-auto px-4">
+            <div class="text-center mb-12 fade-up">
+                <span class="text-brand font-bold tracking-widest text-sm">WHY CHOOSE US</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold mt-2 text-text-main">
+                    選ばれる3つの理由
+                </h2>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Point 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 fade-up">
+                    <div class="w-full md:w-5/12 order-1 md:order-2">
+                        <div class="aspect-square rounded-full overflow-hidden border-4 border-brand-light bg-white">
+                            <img src="https://images.unsplash.com/photo-1599305090598-fe179d501227?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="清潔感のあるテクスチャの接写" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-7/12 order-2 md:order-1 text-center md:text-left">
+                        <div class="text-brand text-5xl font-serif font-bold opacity-30 mb-[-20px]">01</div>
+                        <h3 class="text-xl font-bold mb-3 border-b-2 border-brand-light inline-block pb-1">塗った瞬間、驚きの浸透力<span class="text-xs font-normal align-top">*</span></h3>
+                        <p class="text-text-light leading-relaxed">
+                            独自のナノカプセル技術により、肌にのせた瞬間にすーっと溶け込みます。「ベタつかないのに、内側から潤う」新感覚。すぐにメイクに取り掛かれるので、朝の準備が劇的にスムーズに。
+                        </p>
+                        <p class="text-xs text-gray-400 mt-2">*角質層まで</p>
+                    </div>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 fade-up">
+                    <div class="w-full md:w-5/12 order-1">
+                        <div class="aspect-square rounded-full overflow-hidden border-4 border-brand-light bg-white relative">
+                             <img src="http://misty-moji-1014.kikirara.jp/笑顔を見せる若い日本人.png" alt="夕方でもお疲れ顔を見せない肌" class="w-full h-full object-cover absolute top-0 left-0">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-7/12 order-2 text-center md:text-left">
+                        <div class="text-brand text-5xl font-serif font-bold opacity-30 mb-[-20px]">02</div>
+                        <h3 class="text-xl font-bold mb-3 border-b-2 border-brand-light inline-block pb-1">夕方まで「お疲れ顔」を見せない</h3>
+                        <p class="text-text-light leading-relaxed">
+                            厳選された美容成分（セラミド、ビタミンC誘導体など）が、肌の潤いバリアを一日中サポート。エアコンによる乾燥や日中のダメージから肌を守り、夕方鏡を見ても「元気な私」をキープします。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 fade-up">
+                    <div class="w-full md:w-5/12 order-1 md:order-2">
+                        <div class="aspect-square rounded-full overflow-hidden border-4 border-brand-light bg-white relative">
+                             <img src="http://misty-moji-1014.kikirara.jp/日本人美女1.png" alt="森の中で笑顔を見せる日本人女性" class="w-full h-full object-cover absolute top-0 left-0">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-7/12 order-2 md:order-1 text-center md:text-left">
+                        <div class="text-brand text-5xl font-serif font-bold opacity-30 mb-[-20px]">03</div>
+                        <h3 class="text-xl font-bold mb-3 border-b-2 border-brand-light inline-block pb-1">敏感な肌を想う、7つのフリー</h3>
+                        <p class="text-text-light leading-relaxed">
+                            忙しい時ほど、肌はデリケートになりがち。パラベン、合成香料、合成着色料、アルコールなどを使用せず、肌へのやさしさをとことん追求しました。リラックスできる天然精油のほのかな香りです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 中間CTA -->
+    <section class="py-12 bg-brand-light">
+        <div class="max-w-screen-md mx-auto px-4 text-center fade-up">
+            <h2 class="text-xl md:text-2xl font-bold mb-6">まずは1ヶ月、あなたの肌で体感してください。</h2>
+            <div class="flex flex-col items-center">
+                <a href="#offer" class="w-full max-w-md block bg-gradient-to-r from-brand to-brand-dark hover:from-brand-dark hover:to-brand text-white font-bold py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg">
+                    初回50%OFFで賢く始める
+                </a>
+                <p class="text-sm text-text-light mt-3">安心の30日間返金保証付き</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⑤ 信頼性・実績 (User Voices) -->
+    <section class="py-16 bg-[#FAFAFA]">
+        <div class="max-w-screen-md mx-auto px-4 fade-up">
+            <div class="text-center mb-12">
+                <span class="text-brand font-bold tracking-widest text-sm">REVIEWS</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold mt-2 text-text-main">
+                    ご愛用者様の嬉しいお声
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Voice 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand font-bold text-lg mr-4">M.S</div>
+                        <div>
+                            <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                            <p class="text-sm text-gray-500">34歳 / 会社員（1児の母）</p>
+                        </div>
+                    </div>
+                    <h4 class="font-bold mb-2">「朝のバタバタが嘘みたい！」</h4>
+                    <p class="text-text-light text-sm leading-relaxed">
+                        子供の準備に追われて自分のケアは後回しでした。これは塗ってすぐ服を着られるくらいベタつかないのに、一日中モチモチ！夕方の自分の顔を見て「疲れてない！」と驚きました。もう手放せません。
+                    </p>
+                </div>
+
+                <!-- Voice 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand font-bold text-lg mr-4">Y.K</div>
+                        <div>
+                            <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                            <p class="text-sm text-gray-500">41歳 / フルタイム勤務</p>
+                        </div>
+                    </div>
+                    <h4 class="font-bold mb-2">「オールインワンの概念が変わった」</h4>
+                    <p class="text-text-light text-sm leading-relaxed">
+                        これまでは「楽だけど物足りない」のが当たり前だと思っていました。でもSkin care coreは、しっかりライン使いした後のようなハリ感が出ます。残業終わりの電車で窓に映る顔も怖くなくなりました（笑）。
+                    </p>
+                </div>
+            </div>
+            <p class="text-right text-xs text-gray-400 mt-4">※個人の感想であり、効果効能を保証するものではありません。</p>
+        </div>
+    </section>
+
+    <!-- ⑥ 定期コースの案内 & ⑦ CTA -->
+    <section id="offer" class="py-16 bg-white relative">
+        <div class="max-w-screen-md mx-auto px-4 fade-up">
+            <div class="bg-brand-light border-2 border-brand rounded-3xl p-6 md:p-10 text-center shadow-xl relative overflow-hidden">
+                <!-- 装飾 -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-white/40 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                
+                <h2 class="text-xl md:text-2xl font-bold text-text-main mb-2">
+                    続けるほど、美しさは定着する。<br>
+                    お得な「スマート美肌コース」
+                </h2>
+                <p class="text-text-light text-sm mb-6">買い忘れなし・ずっとお得な定期便のご案内</p>
+
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-inner mb-8 border border-gray-100 relative">
+                    <!-- オファー内容 -->
+                    <p class="text-gray-500 line-through mb-1">通常価格 6,600円（税込）</p>
+                    <div class="flex items-end justify-center gap-2 text-brand font-bold mb-2">
+                        <span class="text-lg">初回特別価格</span>
+                        <span class="text-5xl font-serif">50</span>
+                        <span class="text-2xl">%OFF</span>
+                    </div>
+                    <div class="text-4xl font-bold text-text-main mb-6">
+                        3,300<span class="text-xl">円</span><span class="text-sm text-gray-500 font-normal">（税込）</span>
+                    </div>
+
+                    <!-- メリットリスト -->
+                    <ul class="text-left max-w-xs mx-auto space-y-3 mb-8">
+                        <li class="flex items-center text-sm font-medium">
+                            <span class="bg-green-100 text-green-700 rounded-full w-5 h-5 flex items-center justify-center mr-3 shrink-0">✓</span>
+                            2回目以降もずっと20%OFF
+                        </li>
+                        <li class="flex items-center text-sm font-medium">
+                            <span class="bg-green-100 text-green-700 rounded-full w-5 h-5 flex items-center justify-center mr-3 shrink-0">✓</span>
+                            日本全国どこでも<span class="text-brand font-bold ml-1">送料無料</span>
+                        </li>
+                        <li class="flex items-center text-sm font-medium">
+                            <span class="bg-green-100 text-green-700 rounded-full w-5 h-5 flex items-center justify-center mr-3 shrink-0">✓</span>
+                            いつでも解約・休止OK<span class="text-xs text-gray-500 ml-1">（※回数縛りなし）</span>
+                        </li>
+                    </ul>
+
+                    <!-- 最終CTA -->
+                    <div class="relative">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-full text-center z-10">
+                            <span class="bg-accent text-white text-xs font-bold px-4 py-1 rounded-full shadow-sm animate-pulse">
+                                今すぐ始めて、明日から実感！
+                            </span>
+                        </div>
+                        <button class="w-full block bg-gradient-to-r from-brand to-brand-dark hover:from-brand-dark hover:to-brand text-white font-bold py-5 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 text-xl md:text-2xl relative overflow-hidden group">
+                            <span class="absolute inset-0 w-full h-full bg-white/20 transform -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out"></span>
+                            初回50%OFFで賢く始める
+                        </button>
+                    </div>
+                    <div class="mt-4 flex justify-center items-center gap-4 text-xs text-gray-500">
+                        <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z"></path></svg>安心のSSL暗号化通信</span>
+                        <span>Amazon Pay対応</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-main text-white py-12 pb-24 md:pb-12 text-center text-sm">
+        <div class="max-w-screen-md mx-auto px-4">
+            <h2 class="font-serif text-lg font-bold tracking-widest mb-4">Skin care core</h2>
+            <div class="flex justify-center gap-4 mb-6 text-gray-400">
+                <a href="#" class="hover:text-white transition-colors">特定商取引法に基づく表記</a>
+                <a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a>
+                <a href="#" class="hover:text-white transition-colors">会社概要</a>
+            </div>
+            <p class="text-gray-500">&copy; 2026 Skin care core All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 追従フローティングCTA (スクロール後に表示) -->
+    <div id="floating-cta" class="md:hidden">
+        <div class="px-4 flex items-center justify-between">
+            <div class="flex flex-col">
+                <span class="text-xs text-brand font-bold">初回限定50%OFF</span>
+                <span class="text-lg font-bold text-text-main leading-none">3,300<span class="text-xs">円</span></span>
+            </div>
+            <a href="#offer" class="bg-brand text-white font-bold py-3 px-6 rounded-full shadow-md text-sm whitespace-nowrap">
+                今すぐ賢く始める
+            </a>
+        </div>
+    </div>
+
+    <!-- JavaScript (アニメーションとフローティングCTAの制御) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // スクロールアニメーション (Fade-up)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // 一度発火したら監視を解除
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach((elem) => {
+                observer.observe(elem);
+            });
+
+            // フローティングCTAの制御
+            const floatingCta = document.getElementById('floating-cta');
+            const fvSection = document.querySelector('section:first-of-type');
+            const offerSection = document.getElementById('offer');
+
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                const fvBottom = fvSection.offsetTop + fvSection.offsetHeight;
+                
+                // フッターやオファーセクションに近づいたら隠すための計算（簡略化）
+                const offerTop = offerSection.offsetTop - window.innerHeight + 100;
+
+                // ファーストビューを過ぎて、かつオファーエリアに到達していない間だけ表示
+                if (scrollY > fvBottom && scrollY < offerTop) {
+                    floatingCta.classList.add('show');
+                } else {
+                    floatingCta.classList.remove('show');
+                }
+            });
+
+            // スムーススクロール
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
